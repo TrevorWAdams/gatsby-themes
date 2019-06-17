@@ -1,0 +1,17 @@
+{
+  "name": "gatsby-themes",
+  "version": "1.0.0",
+  "description": "A collection of Gatsby themes",
+  "author": "Trevor W. Adams <trevorwadams@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "clean": "yarn workspaces run clean",
+    "start": "yarn workspace styled-site start",
+    "build": "yarn workspace styled-site build"
+  },
+  "workspaces": [
+    "sites/*",
+    "themes/*"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "default-site",
+  "version": "1.0.0",
+  "main": "gatsby-config.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf node_modules .cache public",
+    "start": "gatsby develop",
+    "develop": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.9.4",
+    "default-theme": "*",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}

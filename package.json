@@ -8,7 +8,8 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "start": "yarn workspace styled-site start",
-    "build": "yarn workspace styled-site build"
+    "build": "yarn workspace styled-site build",
+    "serve": "yarn workspace styled-site serve"
   },
   "workspaces": [
     "sites/*",

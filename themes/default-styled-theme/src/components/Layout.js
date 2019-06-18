@@ -10,6 +10,7 @@ import {
   Flex,
 } from "theme-ui"
 import { Global } from "@emotion/core"
+import Button from './Button'
 
 export default ({ children }) => {
   // eslint-disable-next-line
@@ -24,16 +25,12 @@ export default ({ children }) => {
           },
         }}
       />
-      <Header
-        css={{
-          p: 4,
-        }}
-      >
+      <Header bg="primary">
         <Flex>
           <Box>
-            <button title="Light Theme" onClick={() => setMode("light")}>
+            <Button title="Light Theme" onClick={() => setMode("light")}>
               Light
-            </button>
+            </Button>
           </Box>
           <Box>
             <button title="Dark Theme" onClick={() => setMode("dark")}>
@@ -56,6 +53,8 @@ export default ({ children }) => {
               GMC
             </button>
           </Box>
+
+          <Box>I am the mode: {JSON.stringify(mode, null, 2)}</Box>
         </Flex>
       </Header>
       <Main>

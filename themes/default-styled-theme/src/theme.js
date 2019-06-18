@@ -9,6 +9,7 @@ const lightMode = {
   primary: "#07c",
   secondary: "#609",
   accent: "#90c",
+  muted: "#666",
 }
 
 
@@ -20,6 +21,7 @@ const darkMode = {
   primary: '#0cf',
   secondary: '#90c',
   accent: '#609',
+  muted: "#666",
 }
 
 const  purpleMode =  {
@@ -30,6 +32,7 @@ const  purpleMode =  {
   primary: "#0cf",
   secondary: "#222",
   accent: "#609",
+  muted: "#666",
 }
 
 const blueMode ={
@@ -40,6 +43,7 @@ const blueMode ={
   primary: "#90c",
   secondary: "#222",
   accent: "#609",
+  muted: "#666",
 }
 
 const gmcMode =  {
@@ -50,6 +54,7 @@ const gmcMode =  {
   primary: "#001C6D",
   secondary: "#1D6D00",
   accent: "#6D001D",
+  muted: "#666",
 }
 
 
@@ -62,6 +67,8 @@ export default {
     primary: lightMode.primary,
     secondary: lightMode.secondary,
     accent: lightMode.accent,
+    muted: lightMode.muted,
+    test: "#000",
     primaries: [
       lighten(0.4, lightMode.primary),
       lighten(0.3, lightMode.primary),
@@ -115,6 +122,8 @@ export default {
         primary: gmcMode.primary,
         secondary: gmcMode.secondary,
         accent: gmcMode.accent,
+        muted: gmcMode.muted,
+        test: "#000",
         primaries: [
           lighten(0.4, gmcMode.primary),
           lighten(0.3, gmcMode.primary),
@@ -168,6 +177,8 @@ export default {
         primary: darkMode.primary,
         secondary: darkMode.secondary,
         accent: darkMode.accent,
+        muted: darkMode.muted,
+        test: "#000",
         primaries: [
           lighten(0.4, darkMode.primary),
           lighten(0.3, darkMode.primary),
@@ -221,6 +232,8 @@ export default {
         primary: purpleMode.primary,
         secondary: purpleMode.secondary,
         accent: purpleMode.accent,
+        muted: purpleMode.muted,
+        test: "#000",
         primaries: [
           lighten(0.4, purpleMode.primary),
           lighten(0.3, purpleMode.primary),
@@ -274,6 +287,8 @@ export default {
         primary: blueMode.primary,
         secondary: blueMode.secondary,
         accent: blueMode.accent,
+        muted: blueMode.muted,
+        test: "#000",
         primaries: [
           lighten(0.4, blueMode.primary),
           lighten(0.3, blueMode.primary),

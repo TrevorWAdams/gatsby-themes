@@ -51,6 +51,11 @@ export default ({ children }) => {
               Blue
             </button>
           </Box>
+          <Box>
+            <button title="GMC Theme" onClick={() => setMode("gmc")}>
+              GMC
+            </button>
+          </Box>
         </Flex>
       </Header>
       <Main>

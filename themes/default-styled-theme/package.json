@@ -15,9 +15,9 @@
   },
   "devDependencies": {
     "gatsby": "^2.9.4",
+    "prettier": "^1.18.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "prettier": "^1.18.2"
+    "react-dom": "^16.8.6"
   },
   "peerDependencies": {
     "gatsby": "^2.9.4",
@@ -30,7 +30,8 @@
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
     "gatsby-mdx": "^0.6.3",
-    "theme-ui": "^0.1.5",
-    "gatsby-plugin-page-creator": "^2.0.13"
+    "gatsby-plugin-page-creator": "^2.0.13",
+    "polished": "^3.4.1",
+    "theme-ui": "^0.1.5"
   }
 }

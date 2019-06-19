@@ -7,9 +7,9 @@
   "license": "MIT",
   "scripts": {
     "clean": "yarn workspaces run clean",
-    "start": "yarn workspace styled-site start",
-    "build": "yarn workspace styled-site build",
-    "serve": "yarn workspace styled-site serve"
+    "start": "yarn workspace default-site start",
+    "build": "yarn workspace default-site build",
+    "serve": "yarn workspace default-site serve"
   },
   "workspaces": [
     "sites/*",

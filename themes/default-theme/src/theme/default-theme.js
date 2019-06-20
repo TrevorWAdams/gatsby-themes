@@ -3,22 +3,22 @@ import { grayscale, lighten, darken } from "polished"
 const lightMode = {
   black: "#000",
   white: "#fff",
-  text: "#000",
+  text: "#15153f",
   background: "#fff",
   primary: "#663399",
-  secondary: "#609",
-  accent: "#90c",
-  muted: "#666",
+  secondary: "#636B61",
+  accent: "#AFA2FF",
+  muted: "#72788D",
 }
 
 const darkMode = {
   black: "#000",
   white: "#fff",
   text: "#fff",
-  background: "#222",
+  background: "#15153f",
   primary: "#663399",
-  secondary: "#609",
-  accent: "#90c",
+  secondary: "#636B61",
+  accent: "#AFA2FF",
   muted: "#666",
 }
 

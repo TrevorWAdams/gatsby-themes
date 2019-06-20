@@ -4,11 +4,11 @@ import { Box } from "theme-ui"
 const Sidebar = ({ isOpen, children }) => {
   return (
     <Box
-      bg="primary"
+      bg="secondary"
       as='aside'
       width={isOpen ? 1 / 6 : 0}
       overflow="hidden"
-      
+      p={isOpen ? 3 : 0}
     >
       {children}
     </Box>

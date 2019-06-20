@@ -1,14 +1,15 @@
 import React from "react"
-import ColorHue from "./hue"
+//import Hue from "./hue"
 import theme from "../theme"
 
 const Colors = () => {
   const { colors } = theme
   return (
     <div>
-      {Object.entries(colors).map(([key, value], index) => (
+      {/* {Object.entries(colors).map(([key, value], index) => (
         <ColorHue key={index} colorName={key} colors={value} />
-      ))}
+      ))} */}
+      <div>{JSON.stringify(colors, null, 2)}</div>
     </div>
   )
 }

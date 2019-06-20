@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { Container, Layout, Header, Main, Footer, Box, Flex } from "theme-ui"
 import { Global } from "@emotion/core"
 import ToggleColorMode from "./toggleColorMode"
-import Sidebar from "./Sidebar"
+import Sidebar from "./sidebar"
+
 
 export default ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,16 +18,10 @@ export default ({ children }) => {
         }}
       />
       <Header>
-        <Flex>
-          <Box>
-            <button title="ToggleSidebar" onClick={() => setIsOpen(!isOpen)}>
-              Sidebar
-            </button>
-          </Box>
-          <Box>
-            <ToggleColorMode />
-          </Box>
-        </Flex>
+        <button title="ToggleSidebar" onClick={() => setIsOpen(!isOpen)}>
+          Sidebar
+        </button>
+        <ToggleColorMode />
       </Header>
       <Main>
         <Container>

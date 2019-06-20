@@ -1,7 +1,7 @@
 import React from "react"
 import { readableColor, parseToRgb, parseToHsl } from "polished"
 
-const ColorSwatch = ({ color }) => {
+const Swatch = ({ color }) => {
   const hslColor = parseToHsl(color)
   const rgbColor = parseToRgb(color)
 
@@ -45,4 +45,4 @@ const ColorSwatch = ({ color }) => {
   )
 }
 
-export default ColorSwatch
+export default Swatch

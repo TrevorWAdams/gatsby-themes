@@ -5,7 +5,7 @@ const lightMode = {
   white: "#fff",
   text: "#000",
   background: "#fff",
-  primary: "#07c",
+  primary: "#663399",
   secondary: "#609",
   accent: "#90c",
   muted: "#666",
@@ -16,9 +16,9 @@ const darkMode = {
   white: "#fff",
   text: "#fff",
   background: "#222",
-  primary: "#0cf",
-  secondary: "#90c",
-  accent: "#609",
+  primary: "#663399",
+  secondary: "#609",
+  accent: "#90c",
   muted: "#666",
 }
 
@@ -68,6 +68,10 @@ export default {
     gray7: grayscale(darken(0.2, lightMode.black)),
     gray8: grayscale(darken(0.3, lightMode.black)),
     gray9: grayscale(darken(0.4, lightMode.black)),
+    header: {
+      text: lightMode.text,
+      background: lightMode.primary,
+    },
     modes: {
       dark: {
         black: darkMode.black,
@@ -114,6 +118,10 @@ export default {
         gray7: grayscale(darken(0.2, darkMode.black)),
         gray8: grayscale(darken(0.3, darkMode.black)),
         gray9: grayscale(darken(0.4, darkMode.black)),
+        header: {
+          text: darkMode.text,
+          background: darkMode.primary,
+        },
       },
     },
   },
@@ -139,6 +147,22 @@ export default {
         color: "secondary",
         textDecoration: "underline",
       },
+    },
+    Header: {
+      color:"white",
+      bg: "primary"
+    },
+    Main: {
+      display: "flex",
+    },
+    Container: {
+      maxWidth: 2560,
+      p: 0,
+      display: "flex",
+    },
+    Footer: {
+      color:"white",
+      bg: "primary"
     },
   },
 }

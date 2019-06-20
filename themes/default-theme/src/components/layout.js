@@ -1,21 +1,10 @@
 import React, { useState } from "react"
-import {
-  useColorMode,
-  Layout,
-  Header,
-  Main,
-  Container,
-  Footer,
-  Box,
-  Flex,
-} from "theme-ui"
+import { Container, Layout, Header, Main, Footer, Box, Flex } from "theme-ui"
 import { Global } from "@emotion/core"
-import ToggleColorMode from "./ToggleColorMode"
+import ToggleColorMode from "./toggleColorMode"
 import Sidebar from "./Sidebar"
 
 export default ({ children }) => {
-  // eslint-disable-next-line
-  const [mode, setMode] = useColorMode()
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -27,7 +16,7 @@ export default ({ children }) => {
           },
         }}
       />
-      <Header bg="primary">
+      <Header>
         <Flex>
           <Box>
             <button title="ToggleSidebar" onClick={() => setIsOpen(!isOpen)}>
@@ -40,14 +29,22 @@ export default ({ children }) => {
         </Flex>
       </Header>
       <Main>
-        <Flex>
-          <Sidebar isOpen={isOpen} />
+        <Container>
+          <Sidebar isOpen={isOpen}>
+            <div>
+              <h2>Sidebar</h2>
+              <p>
+                Wes Anderson fap tousled locavore hoodie disrupt stumptown 8-bit
+                pickled normcore meh VHS 90's distillery cornhole quinoa
+              </p>
+            </div>
+          </Sidebar>
           <Box width={1} p={3}>
             {children}
           </Box>
-        </Flex>
+        </Container>
       </Main>
-      <Footer color="white" bg="rebeccapurple">
+      <Footer>
         <Flex width={1}>
           <Box width={1 / 6}>Icon</Box>
           <Box width={2 / 3}>I am the Footer Column 2</Box>

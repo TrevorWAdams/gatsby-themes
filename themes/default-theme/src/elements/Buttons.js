@@ -1,8 +1,26 @@
-import styled from "@emotion/styled"
+import React from 'react'
+import styled from '@emotion/styled'
+import { MenuIcon } from '../elements'
 
 const Button = styled.button`
-  color: text;
-  background-color: primary;
+  background-color: #333399;
+  border: none;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0.25rem;
+  cursor: pointer;
 `
 
-export { Button }
+const MenuButton = ({ onClick }) => {
+  return (
+    <Button onClick={onClick}>
+      <MenuIcon />
+    </Button>
+  )
+}
+
+export { Button, MenuButton }

@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import { Container, Layout, Header, Main, Footer, Box, Flex } from "theme-ui"
-import { Global } from "@emotion/core"
-import ToggleColorMode from "./toggleColorMode"
-import Sidebar from "./sidebar"
+import React, { useState } from 'react'
+import { Container, Layout, Main, Footer, Box } from 'theme-ui'
+import { Global } from '@emotion/core'
+import Sidebar from './sidebar'
+import Header from './Header'
 
 
 export default ({ children }) => {
@@ -17,12 +17,7 @@ export default ({ children }) => {
           },
         }}
       />
-      <Header>
-        <button title="ToggleSidebar" onClick={() => setIsOpen(!isOpen)}>
-          Sidebar
-        </button>
-        <ToggleColorMode />
-      </Header>
+      <Header toggleSidebar={() => setIsOpen(!isOpen)} />
       <Main>
         <Container>
           <Sidebar isOpen={isOpen}>
@@ -39,13 +34,7 @@ export default ({ children }) => {
           </Box>
         </Container>
       </Main>
-      <Footer>
-        <Flex width={1}>
-          <Box width={1 / 6}>Icon</Box>
-          <Box width={2 / 3}>I am the Footer Column 2</Box>
-          <Box width={1 / 6}>Icon</Box>
-        </Flex>
-      </Footer>
+      <Footer>I am the Footer</Footer>
     </Layout>
   )
 }

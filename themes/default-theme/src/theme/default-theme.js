@@ -1,25 +1,25 @@
 import { grayscale, lighten, darken } from "polished"
 
 const lightMode = {
-  black: "#000",
-  white: "#fff",
+  black: "#000000",
+  white: "#ffffff",
   text: "#15153f",
-  background: "#fff",
+  background: "#ffffff",
   primary: "#663399",
-  secondary: "#636B61",
-  accent: "#AFA2FF",
+  secondary: "#333399",
+  accent: "#993399",
   muted: "#72788D",
 }
 
 const darkMode = {
-  black: "#000",
-  white: "#fff",
-  text: "#fff",
+  black: "#000000",
+  white: "#ffffff",
+  text: "#ffffff",
   background: "#15153f",
   primary: "#663399",
-  secondary: "#636B61",
-  accent: "#AFA2FF",
-  muted: "#666",
+  secondary: "#333399",
+  accent: "#993399",
+  muted: "#666666",
 }
 
 export default {
@@ -59,15 +59,15 @@ export default {
     accent7: darken(0.2, lightMode.accent),
     accent8: darken(0.3, lightMode.accent),
     accent9: darken(0.4, lightMode.accent),
-    gray1: grayscale(lighten(0.4, lightMode.black)),
-    gray2: grayscale(lighten(0.3, lightMode.black)),
-    gray3: grayscale(lighten(0.2, lightMode.black)),
-    gray4: grayscale(lighten(0.1, lightMode.black)),
-    gray5: grayscale(lightMode.black),
-    gray6: grayscale(darken(0.1, lightMode.black)),
-    gray7: grayscale(darken(0.2, lightMode.black)),
-    gray8: grayscale(darken(0.3, lightMode.black)),
-    gray9: grayscale(darken(0.4, lightMode.black)),
+    gray1: grayscale(lighten(0.4, lightMode.primary)),
+    gray2: grayscale(lighten(0.3, lightMode.primary)),
+    gray3: grayscale(lighten(0.2, lightMode.primary)),
+    gray4: grayscale(lighten(0.1, lightMode.primary)),
+    gray5: grayscale(lightMode.primary),
+    gray6: grayscale(darken(0.1, lightMode.primary)),
+    gray7: grayscale(darken(0.2, lightMode.primary)),
+    gray8: grayscale(darken(0.3, lightMode.primary)),
+    gray9: grayscale(darken(0.4, lightMode.primary)),
     header: {
       text: lightMode.text,
       background: lightMode.primary,
@@ -150,7 +150,9 @@ export default {
     },
     Header: {
       color:"white",
-      bg: "primary"
+      bg: "primary",
+      display: "flex",
+      justifyContent: "space-between",
     },
     Main: {
       display: "flex",
@@ -162,7 +164,11 @@ export default {
     },
     Footer: {
       color:"white",
-      bg: "primary"
+      bg: "primary",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100px",
     },
   },
 }

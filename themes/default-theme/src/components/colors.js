@@ -1,16 +1,22 @@
-import React from "react"
-//import Hue from "./hue"
-import theme from "../theme"
+import React from 'react'
+import { Flex } from "theme-ui"
+import theme from '../theme'
+import Swatch from './swatch'
 
 const Colors = () => {
   const { colors } = theme
+  const swatches = Object.entries(colors)
   return (
-    <div>
-      {/* {Object.entries(colors).map(([key, value], index) => (
-        <ColorHue key={index} colorName={key} colors={value} />
-      ))} */}
-      <div>{JSON.stringify(colors, null, 2)}</div>
-    </div>
+      <Flex flexWrap="wrap">
+        {swatches &&
+          swatches.map(swatch => (
+            <Swatch
+              key={swatch[0]}
+              color={JSON.stringify(swatch[1])}
+              colorName={swatch[0]}
+            />
+          ))}
+      </Flex>
   )
 }
 

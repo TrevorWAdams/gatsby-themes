@@ -1,8 +1,8 @@
-import React from 'react';
-import { css } from '@emotion/core';
-import { Link } from 'gatsby';
-import Image from 'gatsby-image';
-import ReadLink from '../components/read-link';
+import React from 'react'
+import { css } from 'theme-ui'
+import { Link } from 'gatsby'
+import Image from 'gatsby-image'
+import ReadLink from './read-link'
 
 const PostPreview = ({ post }) => (
   <article
@@ -42,6 +42,6 @@ const PostPreview = ({ post }) => (
       <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
     </div>
   </article>
-);
+)
 
-export default PostPreview;
+export default PostPreview

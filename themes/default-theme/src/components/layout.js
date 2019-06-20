@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Layout, Main, Footer, Box } from 'theme-ui'
 import { Global } from '@emotion/core'
 import Sidebar from './sidebar'
-import Header from './Header'
+import Header from './header'
 
 
 export default ({ children }) => {

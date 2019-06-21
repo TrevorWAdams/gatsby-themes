@@ -2,7 +2,7 @@ var path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: 'Default Theme',
+    title: 'Default Gatsby Theme',
     description:
       'A default theme.',
   },

@@ -50,7 +50,7 @@ const ToggleStyles = styled(Flex)`
 
 const ToggleButton = ({ onClick }) => {
   return (
-    <ToggleStyles>
+    <ToggleStyles mr={1}>
       <Center>
         <input
           type="checkbox"

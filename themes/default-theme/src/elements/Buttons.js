@@ -18,10 +18,10 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const MenuButton = ({ onClick }) => {
+const MenuButton = ({ onClick, title, ...props}) => {
   return (
-    <Button onClick={onClick}>
-      <MenuIcon color="white" />
+    <Button onClick={onClick} title={title} >
+      <MenuIcon props={props} />
     </Button>
   )
 }

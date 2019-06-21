@@ -16,9 +16,9 @@ const darkMode = {
   white: "#ffffff",
   text: "#ffffff",
   background: "#15153f",
-  primary: "#663399",
-  secondary: "#333399",
-  accent: "#993399",
+  primary: "#333399",
+  secondary: "#663399",
+  accent: "#72788D",
   muted: "#666666",
 }
 
@@ -127,11 +127,14 @@ export default {
   },
   fonts: {
     body: "system-ui, sans-serif",
-    heading: "inherit",
+    heading: "system-ui, sans-serif",
   },
+  fontSizes: [
+    12, 14, 16, 20, 24, 32
+  ],
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
   styles: {
     root: {
@@ -147,6 +150,32 @@ export default {
         color: "secondary",
         textDecoration: "underline",
       },
+    },
+    h1: {
+      fontFamily: "heading",
+      lineHeight: "heading",
+      color: "secondary",
+    },
+    h2: {
+      fontFamily: "heading",
+      lineHeight: "heading",
+      color: "secondary3",
+    },
+    h3: {
+      fontFamily: "heading",
+      lineHeight: "heading",
+      color: "secondary3",
+    },
+    h4: {
+      fontFamily: "heading",
+      lineHeight: "heading",
+      color: "secondary2",
+    },
+    h5: {
+      fontFamily: "heading",
+      lineHeight: "heading",
+      textTransform: "uppercase",
+      color: "secondary2",
     },
     Header: {
       color:"white",

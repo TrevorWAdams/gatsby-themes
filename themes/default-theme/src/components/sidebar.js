@@ -4,7 +4,7 @@ import { Box } from "theme-ui"
 const Sidebar = ({ isOpen, children }) => {
   return (
     <Box
-      bg="secondary"
+      bg="primary3"
       as='aside'
       width={isOpen ? 1 / 6 : 0}
       overflow="hidden"

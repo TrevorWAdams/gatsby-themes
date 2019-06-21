@@ -2,7 +2,7 @@ import React from 'react'
 
 const MenuIcon = () => {
   return (
-    <svg width="18" height="18" viewbox="0 0 18 18" fill="none">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
       <path
         fill="#fff"
         fillRule="evenodd"

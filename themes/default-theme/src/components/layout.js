@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
 import { Container, Layout, Main, Footer, Box } from 'theme-ui'
 import { Global } from '@emotion/core'
+import Helmet from 'react-helmet';
 import Sidebar from './sidebar'
 import Header from './header'
+import useSiteMetadata from '../hooks/use-sitemetadata';
 
 
 export default ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const { title, description } = useSiteMetadata();
 
   return (
     <Layout>
@@ -17,20 +20,16 @@ export default ({ children }) => {
           },
         }}
       />
+      
+      <Helmet>
+        <html lang="en" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <Main>
         <Container>
-          <Sidebar isOpen={isSidebarOpen}>
-            <h1>h1</h1>
-            <h2>h2</h2>
-            <h3>h3</h3>
-            <h4>h4</h4>
-            <h5>h5</h5>
-            <p>
-              Wes Anderson fap tousled locavore hoodie disrupt stumptown 8-bit
-              pickled normcore meh VHS 90's distillery cornhole quinoa
-            </p>
-          </Sidebar>
+          <Sidebar isOpen={isSidebarOpen} />
           <Box width={1} p={3}>
             {children}
           </Box>

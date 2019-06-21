@@ -11,10 +11,10 @@ const Sidebar = ({ isOpen }) => {
       p={3}
     >
       <Box as="h1">Posts</Box>
-      <Flex bg="background" p={3}>
+      <Flex bg="background" p={2} height="100%" m={1}>
         <Box width={isOpen ? 1 / 2 : 1}>
-          <Box overflow="hidden">category 1</Box>
-          <Box overflow="hidden">category 2</Box>
+          <Box overflow="hidden">icon1</Box>
+          <Box overflow="hidden">icon2</Box>
         </Box>
 
         <Box width={isOpen ? 1 / 2 : 0}>

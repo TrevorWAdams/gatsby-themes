@@ -4,7 +4,7 @@ import { MenuIcon } from './icons'
 
 const Button = styled.button`
   background-color: ${props =>
-    props.theme.colors.secondary ? props.theme.colors.secondary : '#333399'};
+    props.theme.colors.secondary ? props.theme.colors.secondary : 'pink'};
   border: none;
   color: white;
   padding: 1rem;
@@ -18,10 +18,10 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const MenuButton = ({ onClick, title, ...props}) => {
+const MenuButton = ({ onClick, title}) => {
   return (
     <Button onClick={onClick} title={title} >
-      <MenuIcon props={props} />
+      <MenuIcon />
     </Button>
   )
 }

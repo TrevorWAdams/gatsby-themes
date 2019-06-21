@@ -30,14 +30,21 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path:  path.resolve(__dirname, `src/posts`),
+        path:  path.resolve(__dirname, `src/content/posts`),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path:  path.resolve(__dirname, `src/images`),
+        path:  path.resolve(__dirname, `src/content/images`),
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'parts',
+        path:  path.resolve(__dirname, `src/content/parts`),
       },
     },
     {

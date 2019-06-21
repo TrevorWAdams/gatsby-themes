@@ -1,16 +1,33 @@
-import React from "react"
-import { Box } from "theme-ui"
+import React from 'react'
+import { Box, Flex } from 'theme-ui'
 
-const Sidebar = ({ isOpen, children }) => {
+const Sidebar = ({ isOpen }) => {
   return (
     <Box
       bg="primary3"
-      as='aside'
-      width={isOpen ? 1 / 6 : 0}
+      as="aside"
+      width={isOpen ? 1 / 6 : 1 / 12}
       overflow="hidden"
-      p={isOpen ? 3 : 0}
+      p={3}
     >
-      {children}
+      <Box as="h1">Posts</Box>
+      <Flex bg="background" p={3}>
+        <Box width={isOpen ? 1 / 2 : 1}>
+          <Box overflow="hidden">category 1</Box>
+          <Box overflow="hidden">category 2</Box>
+        </Box>
+
+        <Box width={isOpen ? 1 / 2 : 0}>
+          <Flex
+            width={1}
+            flexDirection="column"
+            overflow="hidden"
+          >
+            <Box>title 1</Box>
+            <Box>title 2</Box>
+          </Flex>
+        </Box>
+      </Flex>
     </Box>
   )
 }

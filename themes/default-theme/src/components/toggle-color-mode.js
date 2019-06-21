@@ -6,7 +6,7 @@ import { Center } from '../elements'
 const ToggleStyles = styled(Flex)`
   cursor: inherit;
   height: 50px;
-  width: 50px;
+  width: 65px;
   justify-content: center;
   align-items: center;
   background-color: ${props =>

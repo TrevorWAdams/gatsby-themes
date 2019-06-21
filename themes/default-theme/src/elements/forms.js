@@ -14,32 +14,38 @@ const loading = keyframes`
 `
 
 const Form = styled.form`
-  background: rgba(0, 0, 0, 0.02);
-  border: 5px solid white;
+  background-color: ${props =>
+    props.theme.colors.secondary3 ? props.theme.colors.secondary3 : 'pink'};
+  border: 5px solid ${props =>
+    props.theme.colors.secondary2 ? props.theme.colors.secondary2 : 'pink'};
   padding: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 600;
   label {
     display: block;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
   }
   input,
   textarea,
   select {
-    width: 100%;
+    width: 95%;
     padding: 0.5rem;
     font-size: 1rem;
-    border: 1px solid black;
+    border: 1px solid ${props =>
+        props.theme.colors.secondary2 ? props.theme.colors.secondary2 : 'pink'};
     &:focus {
       outline: 0;
-      border-color: #ff3019;
+      border-color:  ${props =>
+        props.theme.colors.secondary1 ? props.theme.colors.secondary1 : 'pink'};
     }
   }
   button,
   input[type="submit"] {
     width: auto;
     border: 0;
+    margin: 1rem;
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;

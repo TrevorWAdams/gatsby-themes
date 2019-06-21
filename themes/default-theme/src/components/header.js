@@ -2,11 +2,12 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { Header, Box } from 'theme-ui'
-import ToggleColorMode from './toggleColorMode'
+import ToggleColorMode from './toggle-color-mode'
 import { MenuButton } from '../elements'
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: ${props =>
+    props.theme.colors.white ? props.theme.colors.white : '#FFF'};
   font-size: 1.75rem;
   font-weight: 'bold';
   line-height: 1.5;
@@ -15,7 +16,9 @@ const NavLink = styled(Link)`
   text-decoration: none;
 
   &.current-page {
-    border-bottom: 4px solid #993399;
+    border-bottom: 4px solid
+      ${props =>
+        props.theme.colors.accent ? props.theme.colors.accent : '#993399'};
   }
 
   &:last-of-type {
@@ -44,7 +47,10 @@ const HeaderWrapper = ({ toggleSidebar }) => {
           Contact
         </NavLink>
       </Nav>
-      <ToggleColorMode />
+
+      <Box p={1} my="auto">
+        <ToggleColorMode />
+      </Box>
     </Header>
   )
 }

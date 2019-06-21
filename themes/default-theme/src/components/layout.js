@@ -6,7 +6,7 @@ import Header from './header'
 
 
 export default ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <Layout>
@@ -17,10 +17,10 @@ export default ({ children }) => {
           },
         }}
       />
-      <Header toggleSidebar={() => setIsOpen(!isOpen)} />
+      <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <Main>
         <Container>
-          <Sidebar isOpen={isOpen}>
+          <Sidebar isOpen={isSidebarOpen}>
             <div>
               <h2>Sidebar</h2>
               <p>

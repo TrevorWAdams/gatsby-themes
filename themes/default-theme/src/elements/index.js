@@ -1,3 +1,3 @@
-export * from "./Buttons"
-export * from "./Icons"
-export * from "./Layout"
+export * from "./buttons"
+export * from "./icons"
+export * from "./layout"

@@ -23,6 +23,7 @@ const darkMode = {
 }
 
 export default {
+  initialColorMode: 'light',
   colors: {
     black: lightMode.black,
     white: lightMode.white,
@@ -202,8 +203,7 @@ export default {
       bg: 'primary',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
-      height: '100px',
+      alignItems: 'center'
     },
   },
 }

@@ -1,11 +1,10 @@
 import React from 'react'
-import { Box, Flex } from 'theme-ui'
+import { Flex } from 'theme-ui'
 import { Nav, NavLink, Sidebar } from '../elements'
 
 const SidebarWrapper = ({ isOpen }) => {
   return (
     <Sidebar as="aside" width={isOpen ? 1/3 : 0} isOpen={isOpen} >
-      <Box as="h1" m={3} p={3}>Menu</Box>
       <Nav>
         <Flex flexDirection="column">
           <NavLink to="/" fontWeight="bold" activeClassName="current-page">

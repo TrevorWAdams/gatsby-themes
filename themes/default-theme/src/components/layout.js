@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { Container, Layout, Main, Footer, Box } from 'theme-ui'
+import { Container, Layout, Main, Box } from 'theme-ui'
 import { Global } from '@emotion/core'
-import Helmet from 'react-helmet';
 import Sidebar from './sidebar'
 import Header from './header'
-import useSiteMetadata from '../hooks/use-sitemetadata';
-
+import useSiteMetadata from '../hooks/use-sitemetadata'
+import Footer from './footer'
+import SEO from './seo'
 
 export default ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const { title, description } = useSiteMetadata();
+  const { title, description } = useSiteMetadata()
 
   return (
     <Layout>
@@ -20,12 +20,7 @@ export default ({ children }) => {
           },
         }}
       />
-      
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Helmet>
+      <SEO title={title} description={description} />
       <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <Main>
         <Container>
@@ -35,7 +30,7 @@ export default ({ children }) => {
           <Sidebar isOpen={isSidebarOpen} />
         </Container>
       </Main>
-      <Footer>I am the Footer</Footer>
+      <Footer />
     </Layout>
   )
 }

@@ -69,11 +69,11 @@ const ToggleColorMode = () => {
 
   return (
     <Flex alignItems="center">
-      <Box m={2}>Mode</Box>
       <ToggleButton
         title="Toggle Color Mode"
         onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
       />
+      <Box m={2}>Color Mode</Box>
     </Flex>
   )
 }

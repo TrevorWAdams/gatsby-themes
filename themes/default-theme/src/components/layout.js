@@ -29,10 +29,10 @@ export default ({ children }) => {
       <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <Main>
         <Container>
-          <Sidebar isOpen={isSidebarOpen} />
           <Box width={1} p={3}>
             {children}
           </Box>
+          <Sidebar isOpen={isSidebarOpen} />
         </Container>
       </Main>
       <Footer>I am the Footer</Footer>

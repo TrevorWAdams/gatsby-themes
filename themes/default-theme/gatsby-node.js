@@ -20,35 +20,35 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const posts = result.data.allMdx.nodes
 
   const postTemplate = require.resolve('./src/templates/post-template.js')
-  const categoryTemplate = require.resolve(
-    './src/templates/category-template.js',
-  )
+  // const categoryTemplate = require.resolve(
+  //   './src/templates/category-template.js',
+  // )
 
-  const categorySet = new Set()
-  posts.forEach(edge => {
-    const {
-      node: {
-        frontmatter: { categories },
-      },
-    } = edge
+  // const categorySet = new Set()
+  // posts.forEach(edge => {
+  //   const {
+  //     node: {
+  //       frontmatter: { categories },
+  //     },
+  //   } = edge
 
-    if (categories) {
-      categories.forEach(category => {
-        categorySet.add(category)
-      })
-    }
-  })
+  //   if (categories) {
+  //     categories.forEach(category => {
+  //       categorySet.add(category)
+  //     })
+  //   }
+  // })
 
-  const categoryList = Array.from(categorySet)
-  categoryList.forEach(category => {
-    createPage({
-      path: `/categories/${_.kebabCase(category)}/`,
-      component: categoryTemplate,
-      context: {
-        category,
-      },
-    })
-  })
+  // const categoryList = Array.from(categorySet)
+  // categoryList.forEach(category => {
+  //   createPage({
+  //     path: `/categories/${_.kebabCase(category)}/`,
+  //     component: categoryTemplate,
+  //     context: {
+  //       category,
+  //     },
+  //   })
+  // })
 
   posts.forEach(post => {
     createPage({

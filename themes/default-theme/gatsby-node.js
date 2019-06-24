@@ -2,7 +2,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx(filter: { frontmatter: { template: { ne: "part" } } }) {
+      allMdx {
         nodes {
           frontmatter {
             template
@@ -17,7 +17,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   if (result.errors) {
     reporter.panic('failed to create posts', result.errors)
   }
-  const posts = result.data.allMdx.nodes
+  const items = result.data.allMdx.nodes
 
   const postTemplate = require.resolve('./src/templates/post-template.js')
   // const categoryTemplate = require.resolve(
@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // )
 
   // const categorySet = new Set()
-  // posts.forEach(edge => {
+  // items.forEach(edge => {
   //   const {
   //     node: {
   //       frontmatter: { categories },
@@ -50,12 +50,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   //   })
   // })
 
-  posts.forEach(post => {
+
+  const posts = items.filter(item => item.frontmatter.template === 'post');
+
+  posts.forEach((post, index) => {
+    const next = index === 0 ? undefined : posts[index - 1].node
+    const prev = index === posts.length - 1 ? undefined : posts[index + 1].node
+
     createPage({
       path: post.frontmatter.slug,
       component: postTemplate,
       context: {
         slug: post.frontmatter.slug,
+        prev,
+        next,
       },
     })
   })

@@ -9,6 +9,8 @@
     "clean": "yarn workspaces run clean",
     "start": "yarn workspace default-site start",
     "build": "yarn workspace default-site build",
+    "build:default": "yarn workspace default-site build",
+    "build:purple": "yarn workspace default-site build",
     "serve": "yarn workspace default-site serve"
   },
   "workspaces": [

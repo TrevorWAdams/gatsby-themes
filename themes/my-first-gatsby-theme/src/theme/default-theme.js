@@ -3,23 +3,23 @@ import { grayscale, lighten, darken } from 'polished'
 const lightMode = {
   black: '#000000',
   white: '#ffffff',
-  text: '#15153f',
-  background: '#ffffff',
-  primary: '#663399',
-  secondary: '#333399',
-  accent: '#993399',
-  muted: '#72788D',
+  text: '#3f3f3f',
+  background: '#f9f9f9',
+  primary: '#e0e0e0',
+  secondary: '#9f9f9f',
+  accent: '#6c6c6c',
+  muted: '#c3c3c3',
 }
 
 const darkMode = {
   black: '#000000',
   white: '#ffffff',
-  text: '#ffffff',
-  background: '#15153f',
-  primary: '#333399',
-  secondary: '#663399',
-  accent: '#72788D',
-  muted: '#666666',
+  text: '#f9f9f9',
+  background: '#3f3f3f',
+  primary: '#e0e0e0',
+  secondary: '#9f9f9f',
+  accent: '#6c6c6c',
+  muted: '#c3c3c3',
 }
 
 export default {
@@ -161,7 +161,7 @@ export default {
     h1: {
       fontFamily: 'heading',
       lineHeight: 'heading',
-      color: 'secondary',
+      color: 'secondary7',
     },
     h2: {
       fontFamily: 'heading',

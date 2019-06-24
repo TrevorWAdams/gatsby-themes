@@ -1289,6 +1289,11 @@
   dependencies:
     "@styled-system/core" "^5.0.5"
 
+"@theme-ui/presets@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@theme-ui/presets/-/presets-0.2.0.tgz#a9416aa0413800a9dff330355bd73b0e8b81260c"
+  integrity sha512-c3wnOOe66YckaKsbVpCwRB2dw9rjfT7NLco1bnwyTx84Nd3YSHsS7xqDU6N1D0rAGOqSqUgaLFRBvuslh1XU1w==
+
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"

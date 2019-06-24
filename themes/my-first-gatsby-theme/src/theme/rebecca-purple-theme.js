@@ -1,28 +1,29 @@
-import { grayscale, lighten, darken } from "polished"
+import { grayscale, lighten, darken } from 'polished'
 
 const lightMode = {
-  black: "#000",
-  white: "#fff",
-  text: "#fff",
-  background: "#90c",
-  primary: "#0cf",
-  secondary: "#222",
-  accent: "#609",
-  muted: "#666",
+  black: '#000000',
+  white: '#ffffff',
+  text: '#15153f',
+  background: '#ffffff',
+  primary: '#663399',
+  secondary: '#333399',
+  accent: '#993399',
+  muted: '#72788D',
 }
 
 const darkMode = {
-  black: "#000",
-  white: "#fff",
-  text: "#fff",
-  background: "#90c",
-  primary: "#0cf",
-  secondary: "#222",
-  accent: "#609",
-  muted: "#666",
+  black: '#000000',
+  white: '#ffffff',
+  text: '#ffffff',
+  background: '#15153f',
+  primary: '#333399',
+  secondary: '#663399',
+  accent: '#993399',
+  muted: '#72788D',
 }
 
 export default {
+  initialColorMode: 'light',
   colors: {
     black: lightMode.black,
     white: lightMode.white,
@@ -59,15 +60,23 @@ export default {
     accent7: darken(0.2, lightMode.accent),
     accent8: darken(0.3, lightMode.accent),
     accent9: darken(0.4, lightMode.accent),
-    gray1: grayscale(lighten(0.4, lightMode.black)),
-    gray2: grayscale(lighten(0.3, lightMode.black)),
-    gray3: grayscale(lighten(0.2, lightMode.black)),
-    gray4: grayscale(lighten(0.1, lightMode.black)),
-    gray5: grayscale(lightMode.black),
-    gray6: grayscale(darken(0.1, lightMode.black)),
-    gray7: grayscale(darken(0.2, lightMode.black)),
-    gray8: grayscale(darken(0.3, lightMode.black)),
-    gray9: grayscale(darken(0.4, lightMode.black)),
+    gray1: grayscale(lighten(0.4, lightMode.primary)),
+    gray2: grayscale(lighten(0.3, lightMode.primary)),
+    gray3: grayscale(lighten(0.2, lightMode.primary)),
+    gray4: grayscale(lighten(0.1, lightMode.primary)),
+    gray5: grayscale(lightMode.primary),
+    gray6: grayscale(darken(0.1, lightMode.primary)),
+    gray7: grayscale(darken(0.2, lightMode.primary)),
+    gray8: grayscale(darken(0.3, lightMode.primary)),
+    gray9: grayscale(darken(0.4, lightMode.primary)),
+    header: {
+      text: lightMode.text,
+      background: lightMode.primary,
+    },
+    sidebar: {
+      text: lightMode.text,
+      background: lightMode.primary3,
+    },
     modes: {
       dark: {
         black: darkMode.black,
@@ -114,31 +123,87 @@ export default {
         gray7: grayscale(darken(0.2, darkMode.black)),
         gray8: grayscale(darken(0.3, darkMode.black)),
         gray9: grayscale(darken(0.4, darkMode.black)),
+        header: {
+          text: darkMode.text,
+          background: darkMode.primary,
+        },
+        sidebar: {
+          text: lightMode.text,
+          background: lightMode.primary3,
+        },
       },
     },
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "inherit",
+    body: 'system-ui, sans-serif',
+    heading: 'system-ui, sans-serif',
   },
+  fontSizes: [12, 14, 16, 20, 24, 32],
   lineHeights: {
     body: 1.5,
-    heading: 1.125,
+    heading: 1.25,
   },
   styles: {
     root: {
-      fontFamily: "body",
-      lineHeight: "body",
-      color: "text",
-      bg: "background",
+      fontFamily: 'body',
+      lineHeight: 'body',
+      color: 'text',
+      bg: 'background',
     },
     a: {
-      color: "primary",
-      textDecoration: "none",
-      ":hover": {
-        color: "secondary",
-        textDecoration: "underline",
+      color: 'primary',
+      textDecoration: 'none',
+      ':hover': {
+        color: 'secondary',
+        textDecoration: 'underline',
       },
+    },
+    h1: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      color: 'secondary',
+    },
+    h2: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      color: 'secondary3',
+    },
+    h3: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      color: 'secondary3',
+    },
+    h4: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      color: 'secondary2',
+    },
+    h5: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      textTransform: 'uppercase',
+      color: 'secondary2',
+    },
+    Header: {
+      color: 'white',
+      bg: 'primary',
+      display: 'flex',
+      justifyContent: 'space-between',
+    },
+    Main: {
+      display: 'flex',
+    },
+    Container: {
+      maxWidth: 2560,
+      p: 0,
+      display: 'flex',
+    },
+    Footer: {
+      color: 'white',
+      bg: 'primary',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
   },
 }

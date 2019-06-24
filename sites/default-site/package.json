@@ -12,8 +12,9 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "gatsby": "^2.9.4",
     "default-theme": "*",
+    "gatsby": "^2.9.4",
+    "gatsby-source-filesystem": "^2.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }

@@ -1,7 +1,7 @@
 {
-  "name": "default-theme",
+  "name": "my-first-gatsby-theme",
   "private": true,
-  "description": "Default Theme Gatsby starter",
+  "description": "My First Gatsby Theme",
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",

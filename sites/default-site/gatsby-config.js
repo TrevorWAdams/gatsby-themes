@@ -1,9 +1,9 @@
  module.exports = {
-   __experimentalThemes: ['default-theme'],
+   __experimentalThemes: ['my-first-gatsby-theme'],
    siteMetadata: {
-    title: "Site",
+    title: "Rebecca Purple",
     siteUrl: "http://localhost:8000/",
-    description: "Site description",
+    description: "Rebecca Purple description",
   },
   plugins: [
     

@@ -12,7 +12,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "default-theme": "*",
+    "my-first-gatsby-theme": "*",
     "gatsby": "^2.9.4",
     "gatsby-source-filesystem": "^2.1.0",
     "react": "^16.8.6",

@@ -6,12 +6,16 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "clean": "yarn workspaces run clean",
-    "start": "yarn workspace default-site start",
-    "serve": "yarn workspace default-site serve",
     "build": "yarn workspace default-site build",
     "build:default": "yarn workspace default-site build",
-    "build:purple": "yarn workspace rebecca-purple-site build"
+    "build:purple": "yarn workspace rebecca-purple-site build",
+    "clean": "yarn workspaces run clean",
+    "start": "yarn workspace default-site start",
+    "start:default": "yarn workspace default-site start",
+    "start:purple": "yarn workspace rebecca-purple-site start",
+    "serve": "yarn workspace default-site serve",
+    "serve:default": "yarn workspace default-site serve",
+    "serve:purple": "yarn workspace default-site serve"
   },
   "workspaces": [
     "sites/*",

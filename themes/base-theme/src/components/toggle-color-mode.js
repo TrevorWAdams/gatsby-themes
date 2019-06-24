@@ -1,0 +1,81 @@
+import React from 'react'
+import styled from '@emotion/styled'
+import { useColorMode, Box, Flex } from 'theme-ui'
+import { Center } from '../elements'
+
+const ToggleStyles = styled(Flex)`
+  cursor: inherit;
+  height: 50px;
+  width: 65px;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props =>
+    props.theme.colors.secondary ? props.theme.colors.secondary : '#333399'};
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: ${props =>
+      props.theme.colors.primary1 ? props.theme.colors.primary1 : '#FFF'};
+    border-radius: 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+  }
+  input[type='checkbox']:checked + .switch::after {
+    transform: translateX(20px);
+  }
+  input[type='checkbox']:checked + .switch {
+    background-color: ${props =>
+      props.theme.colors.modes.dark.background
+        ? props.theme.colors.modes.dark.background
+        : '#000'};
+  }
+  .offscreen {
+    position: absolute;
+    left: -9999px;
+  }
+`
+
+const ToggleButton = ({ onClick }) => {
+  return (
+    <ToggleStyles mr={1}>
+      <Center>
+        <input
+          type="checkbox"
+          id="toggle"
+          className="offscreen"
+          onClick={onClick}
+        ></input>
+        <label htmlFor="toggle" className="switch"></label>
+      </Center>
+    </ToggleStyles>
+  )
+}
+
+const ToggleColorMode = () => {
+  const [colorMode, setColorMode] = useColorMode('light')
+
+  return (
+    <Flex alignItems="center">
+      <ToggleButton
+        title="Toggle Color Mode"
+        onClick={() => setColorMode(colorMode === 'light' ? 'dark' : 'light')}
+      />
+      <Box m={2}>Color Mode</Box>
+    </Flex>
+  )
+}
+
+export default ToggleColorMode

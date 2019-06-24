@@ -8,10 +8,10 @@
   "scripts": {
     "clean": "yarn workspaces run clean",
     "start": "yarn workspace default-site start",
-    "build": "yarn workspace rebecca-purple-site build",
+    "serve": "yarn workspace default-site serve",
+    "build": "yarn workspace default-site build",
     "build:default": "yarn workspace default-site build",
-    "build:purple": "yarn workspace rebecca-purple-site build",
-    "serve": "yarn workspace default-site serve"
+    "build:purple": "yarn workspace rebecca-purple-site build"
   },
   "workspaces": [
     "sites/*",

@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Styled, ColorMode, components } from 'theme-ui'
+import { jsx, ThemeProvider, Styled, ColorMode, components } from 'theme-ui'
 import { ThemeContext } from '@emotion/core'
 import { MDXProvider } from '@mdx-js/react'
 import { useState } from 'react'
@@ -15,7 +15,7 @@ import {
 import Select from '../components/select'
 import Lorem from './lorem.mdx'
 
-export default () => {
+export default props => {
   const [theme, setTheme] = useState('base')
   const preset = presets[theme]
   return (

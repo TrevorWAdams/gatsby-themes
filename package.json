@@ -12,6 +12,7 @@
     "clean": "yarn workspaces run clean",
     "start": "yarn workspace default-site start",
     "start:default": "yarn workspace default-site start",
+    "start:docs": "yarn workspace docs-site start",
     "start:purple": "yarn workspace rebecca-purple-site start",
     "serve": "yarn workspace default-site serve",
     "serve:default": "yarn workspace default-site serve",

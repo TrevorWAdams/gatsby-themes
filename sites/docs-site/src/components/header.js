@@ -4,7 +4,7 @@ import MenuButton from "./menu-button"
 import NavLink from "./nav-link"
 import Button from "./button"
 
-const modes = ["light", "dark", "deep", "swiss", "purple", "purplelight"]
+const modes = ["light", "dark", "deep", "swiss", "purple", "darkpurple"]
 
 export default ({ menuOpen, setMenuOpen, nav }) => {
   const [mode, setMode] = useColorMode()

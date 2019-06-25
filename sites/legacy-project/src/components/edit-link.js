@@ -32,7 +32,7 @@ export const EditLink = ({ base, children, ...props }) => (
 
 EditLink.defaultProps = {
   base:
-    'https://github.com/trevorwadams/gatsby-themes/edit/master/packages/docs/src/pages',
+    'https://github.com/trevorwadams/gatsby-themes/blob/master/sites/legacy-project/src/pages',
   children: 'Edit the page on GitHub',
 }
 

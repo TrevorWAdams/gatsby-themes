@@ -9,8 +9,8 @@ export default props => (
     }}
   >
     <Container>
-      <Flex>
-        <NavLink to="/">Your Legacy Project</NavLink>
+      <Flex alignItems="center">
+        <NavLink to="/">Legacy Project</NavLink>
         <NavLink href="https://github.com/TrevorWAdams/gatsby-themes">GitHub</NavLink>
       </Flex>
     </Container>

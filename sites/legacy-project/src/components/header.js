@@ -28,7 +28,7 @@ export default ({ menuOpen, setMenuOpen, nav }) => {
                 if (navLink) navLink.focus()
               }}
             />
-            <NavLink to="/">Your Legacy Project</NavLink>
+            <NavLink to="/">Legacy Project</NavLink>
           </Flex>
           <Flex>
             <Button

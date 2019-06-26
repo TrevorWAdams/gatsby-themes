@@ -4,7 +4,6 @@ import { ThemeContext } from '@emotion/core'
 import { MDXProvider } from '@mdx-js/react'
 import { useState } from 'react'
 import { Helmet } from 'react-helmet'
-import * as presets from '@theme-ui/presets'
 import {
   TypeScale,
   TypeStyle,
@@ -12,12 +11,13 @@ import {
   ColorPalette,
   FontFamily,
 } from '@theme-ui/style-guide'
+import themes from '../themes'
 import Select from '../components/select'
-import Lorem from './lorem.mdx'
+import Lorem from '../pages/lorem.mdx'
 
 export default () => {
   const [theme, setTheme] = useState('base')
-  const preset = presets[theme]
+  const selectedTheme = themes[theme]
   return (
     <div>
       <Helmet>
@@ -40,19 +40,19 @@ export default () => {
             mb: 4,
           }}
         >
-          Preset:{' '}
+          Theme:{' '}
           <Select
             value={theme}
             onChange={e => {
               setTheme(e.target.value)
             }}
           >
-            {Object.keys(presets).map(key => (
+            {Object.keys(themes).map(key => (
               <option key={key} children={key} />
             ))}
           </Select>
         </label>
-        <ThemeContext.Provider value={preset}>
+        <ThemeContext.Provider value={selectedTheme}>
           <Styled.root>
             <Styled.h2>Colors</Styled.h2>
             <ColorPalette omit={['modes', 'header']} />
@@ -75,7 +75,7 @@ export default () => {
             </MDXProvider>
             <Styled.h2>Raw JSON</Styled.h2>
             <textarea
-              value={JSON.stringify(preset, null, 2)}
+              value={JSON.stringify(selectedTheme, null, 2)}
               rows={16}
               readOnly
               sx={{

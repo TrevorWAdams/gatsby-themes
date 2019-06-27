@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled, Layout, Main, Box, Container } from "theme-ui"
-import { useState, useRef } from "react"
+import { useState } from "react"
 import { Global } from "@emotion/core"
 
 import SkipLink from "../components/skip-link"
@@ -13,7 +13,6 @@ import Head from "../components/head"
 
 const DefaultLayout = props => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const nav = useRef(null)
 
   return (
     <Styled.root>
@@ -30,7 +29,7 @@ const DefaultLayout = props => {
       />
       <SkipLink>Skip to content</SkipLink>
       <Layout>
-        <Header nav={nav} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Main>
           <Container
             sx={{

@@ -1,4 +1,6 @@
 var path = require("path")
+var defaultLayout = require.resolve(`./src/layouts/default.js`)
+console.log('defaultLayout', defaultLayout);
 
 module.exports = {
   siteMetadata: {
@@ -14,22 +16,31 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         defaultLayouts: {
-          default: path.resolve(`./src/layouts/default-layout.js`)
-        }
+          default: defaultLayout
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true
+            }
+          }
+        ]
       }
     },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        name: `content`,
-        path: `${__dirname}/content`
+        name: `pages`,
+        path: path.resolve(__dirname, `content/pages`),
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-page-creator",
       options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`
+        name: `posts`,
+        path: path.resolve(__dirname, `content/posts`),
       }
     },
     {

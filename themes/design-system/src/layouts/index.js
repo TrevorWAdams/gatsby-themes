@@ -1,4 +1,4 @@
-import defaultLayout from "./default-layout"
+import defaultLayout from "./default"
 
 export default {
   defaultLayout

@@ -6,7 +6,7 @@ import Button from "./button"
 
 const modes = ["light", "dark"]
 
-export default ({ menuOpen, setMenuOpen, nav }) => {
+export default ({ menuOpen, setMenuOpen }) => {
   const [mode, setMode] = useColorMode()
 
   const cycleMode = e => {

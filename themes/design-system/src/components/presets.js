@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, Styled, ColorMode, components } from 'theme-ui'
 import { ThemeContext } from '@emotion/core'
-import { MDXProvider } from '@mdx-js/react'
+//import { MDXProvider } from '@mdx-js/react'
 import { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import {
@@ -13,7 +13,7 @@ import {
 } from '@theme-ui/style-guide'
 import themes from '../themes'
 import Select from '../components/select'
-import Lorem from '../pages/lorem.mdx'
+//import Lorem from './lorem.mdx'
 
 export default () => {
   const [theme, setTheme] = useState('base')
@@ -70,9 +70,9 @@ export default () => {
             </HeadingStyle>
             <Styled.h2>Type Scale</Styled.h2>
             <TypeScale />
-            <MDXProvider components={components}>
+            {/* <MDXProvider components={components}>
               <Lorem />
-            </MDXProvider>
+            </MDXProvider> */}
             <Styled.h2>Raw JSON</Styled.h2>
             <textarea
               value={JSON.stringify(selectedTheme, null, 2)}
